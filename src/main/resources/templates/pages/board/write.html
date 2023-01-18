@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/layoutBoard}">
+
+<th:block layout:fragment="css">
+    <link th:href="@{/board/board_write.css}" rel="stylesheet" />
+</th:block>
+<div layout:fragment="right-con" class="right-con">
+    <form action="write" th:action="@{/board/write}" method="post" >
+        title <input type="text" name="title" id="title"> <br>
+        content <input type="text" name="content" id="content"> <br>
+        writer <input type="text" name="writer" id="writer"> <br>
+        boardPw <input type="text" name="boardPw" id="boardPw"> <br>
+        <input type="submit" value="글작성">
+    </form>
+</div>
+
+</html>

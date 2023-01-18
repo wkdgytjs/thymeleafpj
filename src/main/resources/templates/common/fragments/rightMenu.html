@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="rightMenu" th:fragment="rightMenuFragment">
+    <div  th:replace="/common/fragments/header :: headerFragment"></div>
+    <th:block layout:fragment="right-con"></th:block>
+    <div th:replace="/common/fragments/footer :: footerFragment"></div>
+</div>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/layoutBoard}">
+<th:block layout:fragment="css">
+    <link th:href="@{/board/board_write.css}" rel="stylesheet" />
+</th:block>
+<div layout:fragment="right-con" class="right-con">
+    <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>내용</th>
+            <th>조회수</th>
+            <th>작성시간</th>
+            <th>조회</th>
+        </tr>
+        <tr th:each="list : ${boardList}">
+            <td th:text="${list.id}">1</td>
+            <td th:text="${list.title}">1</td>
+            <td th:text="${list.writer}">1</td>
+            <td th:text="${list.content}">1</td>
+            <td th:text="${list.hit}">1</td>
+            <td th:text="${list.createDateTime}">1</td>
+            <td><a th:href="@{|/board/detail2/${list.id}|}">조회</a></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <a href="" th:href="@{/board/index}">HOME</a>
+                <a href="" th:href="@{/board/write}">글쓰기</a>
+                <a href="" th:href="@{/board/list}">글목록</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</html>
+

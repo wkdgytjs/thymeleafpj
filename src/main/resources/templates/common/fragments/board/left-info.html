@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="left-con"  th:fragment="leftInfoBoard">
+  <div class="admin-info">
+    <div class="left-info">
+      <img th:src="@{/img/spring.svg}" alt="">
+    </div>
+  </div>
+  <div class="admin-menu">
+    <h3 class="title">SPRING JPA BOARD</h3>
+    <ul>
+      <li><a href="" th:href="@{/board/index}">HOME</a></li>
+      <li><a href="" th:href="@{/admin/board/write}">글쓰기</a></li>
+      <li> <a href="" th:href="@{/admin/board/list}">글목록</a></li>
+      <li><a th:href="@{/admin/index}">ADMIN</a> </li>
+    </ul>
+  </div>
+</div>
+</html>

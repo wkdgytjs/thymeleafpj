@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!--변하지않는 공통 레이아웃-->
+                <!-- 공통 헤드 -->
+<head th:replace="/common/fragments/head :: headFragment"></head>
+<body>
+    <div class="container">
+        <div th:replace="/common/fragments/leftMenuBoard :: leftMenuFragment"></div>
+        <div th:replace="/common/fragments/rightMenu :: rightMenuFragment"></div>
+    </div> 
+</body>
+</html>

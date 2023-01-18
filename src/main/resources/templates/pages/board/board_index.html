@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/layoutBoard}">
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <link th:href="@{/board/board_index.css}" rel="stylesheet" />
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <!--    <script th:src=""></script>-->
+</th:block>
+<div layout:fragment="right-con" class="right-con">
+  RIEGHT CONTENT
+</div>
+</html>

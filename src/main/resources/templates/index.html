@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>index</title>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link th:href="@{/css/index.css}" rel="stylesheet" />
 </head>
 <body>
-<div th:replace="/fragments/common/header :: headerFragment"></div>
-<div class="container">index</div>
-<div th:replace="/fragments/common/footer :: footerFragment"></div>
+<div class="index" >
+  <div class="index-con">
+    <ul>
+      <li><a th:href="@{/admin/index}">ADMIN</a> </li>
+      <li>SHOP</li>
+      <li><a th:href="@{/admin/board}">BOARD</a> </li>
+      <li>MEMBER</li>
+    </ul>
+  </div>
+
+</div>
 </body>
 </html>
